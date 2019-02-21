@@ -1,0 +1,39 @@
+@mixin generate($name, $base-color){
+    .#{$name}-base-color {
+        background-color: $base-color;
+    }
+
+    @for $i from 1 through 4{
+
+        .#{$name}-darken#{$i}{
+            background-color: darken($base-color, ($i * 10%))
+        }
+
+        .#{$name}-lighten#{$i}{
+            background-color: lighten($base-color, ($i * 10%))
+        }
+    }
+        
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.collection {
+    height: 7em;    
+    margin-top: 1em; 
+    display: flex;
+}
+
+.item {
+    padding: 3em 0.2em;
+    color: white;    
+    margin-right: 0.3em;
+}  
+
+@include generate("red", rgb(255,0,0));  
+@include generate("green", rgb(0,255,0));  
+@include generate("blue", rgb(0,0,255));
