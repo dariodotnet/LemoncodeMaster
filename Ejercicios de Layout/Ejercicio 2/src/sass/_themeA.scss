@@ -1,0 +1,7 @@
+$baseColor: rgb(255,0,0);
+$importantColor: darken($baseColor, 30%);
+$warningColor: desaturate($baseColor, 100%);
+$mainFontFamily: 'sans-serif';
+$secondaryFontFamily: 'Arial';
+$borderRadius: 3px;
+$shadow: -10px 10px 15px 0px #ccc;

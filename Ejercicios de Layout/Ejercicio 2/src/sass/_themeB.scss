@@ -1,0 +1,7 @@
+$baseColor: rgb(0,0,255);
+$importantColor: darken($baseColor, 30%);
+$warningColor: desaturate($baseColor, 100%);
+$mainFontFamily: 'monospace';
+$secondaryFontFamily: 'Courier New';
+$borderRadius: 10px;
+$shadow: 10px 10px 15px 0px #ccc;

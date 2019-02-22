@@ -1,0 +1,34 @@
+@import "themeA";
+
+body {
+    font-family: $mainFontFamily;
+    font-weight: 600;
+}
+
+.item {
+    color: black;
+    height: 5em;    
+    width: 5em;
+    padding: 1em;
+    margin-top: 0.5em;
+    margin-left: 2em;
+    font-size: 1.3em;    
+
+    background-color: $baseColor;    
+    border: 1px solid black; 
+    border-radius: $borderRadius;
+}
+
+.important {
+    background-color: $importantColor;
+}
+
+.warning {
+    background-color: $warningColor;
+}
+
+.shadow {
+    background-color: white;
+    box-shadow: $shadow;
+    font-family: $secondaryFontFamily;
+}

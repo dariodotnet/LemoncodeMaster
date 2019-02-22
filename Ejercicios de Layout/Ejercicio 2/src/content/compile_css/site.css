@@ -1,0 +1,26 @@
+body {
+  font-family: "sans-serif";
+  font-weight: 600; }
+
+.item {
+  color: black;
+  height: 5em;
+  width: 5em;
+  padding: 1em;
+  margin-top: 0.5em;
+  margin-left: 2em;
+  font-size: 1.3em;
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 3px; }
+
+.important {
+  background-color: #660000; }
+
+.warning {
+  background-color: gray; }
+
+.shadow {
+  background-color: white;
+  box-shadow: -10px 10px 15px 0px #ccc;
+  font-family: "Arial"; }
