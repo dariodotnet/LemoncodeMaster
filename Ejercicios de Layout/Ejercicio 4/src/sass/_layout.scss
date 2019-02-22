@@ -1,0 +1,20 @@
+@mixin grid-definition {
+    display: grid;
+}
+
+@mixin full-resolution {
+    @include grid-definition();
+
+    grid-template-areas: 
+        "menu contenta"
+        "menu contentb";
+
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: repeat(2, 50vh);
+}
+
+@mixin medium-resolution {    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

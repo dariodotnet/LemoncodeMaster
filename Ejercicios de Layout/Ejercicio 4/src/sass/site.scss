@@ -1,0 +1,87 @@
+@import "reset";
+@import "layout";
+
+body {
+    font-family: sans-serif;
+    min-height: 100vh;    
+    display: flex;
+    flex-direction: column;
+}
+
+.main-display{
+    flex-grow: 1;    
+}
+
+.menu {
+    grid-area: menu;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.content-a {
+    grid-area: contenta;   
+    background-color: yellow; 
+}
+
+.content-b {
+    grid-area: contentb;
+    background-color: blue;
+}
+
+@media screen and (min-width: 1980px) {
+    .container{
+        @include full-resolution();  
+        width: 70%;
+        margin: 0 auto;  
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1979px) {
+    .container{
+        @include full-resolution();  
+        width: 85%;
+        margin: 0 auto;  
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+    .container{
+        @include medium-resolution();
+    }
+
+    .menu {
+        flex-direction: row;
+        flex-grow: 1;
+
+        .menu-item {
+            align-self: center;
+        }
+    }
+
+    .content-a, .content-b {
+        flex-grow: 2;
+    }
+}
+
+@media screen and (max-width: 719px){
+    .container{
+        @include medium-resolution();
+        min-height: 100vh;
+    }
+
+    .menu {        
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+
+        .menu-item {
+            margin: 0 0.2em;
+        }
+    }
+
+    .content-a, .content-b {
+        flex-grow: 1;
+    }
+}
